@@ -1,6 +1,4 @@
-
-const url = "https://api.nasa.gov/planetary/apod?api_key=Md6ZhB8e1s2GDDDn6dEI4WialPr963Fl4DVh6PcA&count=15" 
- 
+const url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=15"
 
 async function listaImagenes() {
 
@@ -15,10 +13,11 @@ async function listaImagenes() {
         datosImagenes.forEach( elemento => {
 
             const contenido =
-            `<li class="card">
-                <img class="card__image" src="${elemento.url}" alt="imagen">
-                <h3 class="card__title">${elemento.title}</h3>
-            </li>
+            `
+                <li class="card">
+                    <img class="card__image" src="${elemento.url}" alt="imagen">
+                    <h3 class="card__title">${elemento.title}</h3>
+                </li>
             `
 
             card.innerHTML = card.innerHTML + contenido
